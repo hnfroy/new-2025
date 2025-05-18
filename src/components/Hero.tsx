@@ -6,6 +6,7 @@ export default function Hero() {
   const textRef2 = useRef<HTMLHeadingElement>(null);
   const textRef3 = useRef<HTMLHeadingElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+  const floatingTxtRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -35,11 +36,29 @@ export default function Hero() {
       );
   }, []);
 
+  useEffect(() => {
+    console.log("Floating button found:", floatingTxtRef.current);
+
+    gsap.fromTo(
+      floatingTxtRef.current,
+      { y: 0 },
+      {
+        y: -10,
+        duration: 1.5,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+      }
+    );
+  }, []);
+
   return (
-    <div className="w-full bg-zinc-800">
+    <div className="w-full bg-zinc-800 pt-6">
       <div className="container h-screen p-6 flex flex-col justify-center items-center">
         <div className="w-full">
-          <p className="text-amber-100 font-semibold text-2xl">
+          <p 
+          ref={floatingTxtRef}
+          className="text-amber-100 font-semibold text-2xl">
             UI/UX Designer <br />
             Frontend Developer
           </p>

@@ -1,31 +1,16 @@
-import { useEffect, useState } from "react";
 import SmoothScrollWrapper from "./components/SmoothScrollWrapper";
-import SplashScreen from "./components/SplashScreen";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import StarScroll from "./components/StarScroll";
 import ProjectParallax from "./components/ProjectParallax";
 import CTAContact from "./components/CTAContact";
 import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
-
-  const handleSplashFinish = () => {
-    setShowSplash(false); // Hapus splash screen dari DOM
-  };
-
   return (
     <>
+      <Nav />
       <SmoothScrollWrapper>
-        {/* {showSplash ? (
-          <SplashScreen onFinish={handleSplashFinish} />
-        ) : (
-          <>
-            <Hero />
-            <About />
-          </>
-        )} */}
         <Hero />
         <About />
         <ProjectParallax />
