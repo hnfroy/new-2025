@@ -10,13 +10,13 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="text-sm flex items-center gap-4">
-            <span>Contact me at:</span>
-            <a
+            {/* <span>Contact me at:</span> */}
+            {/* <a
               href="mailto:hnfroy@gmail.com"
               className="hover:text-gray-300 transition"
             >
               hnfroy@gmail.com
-            </a>
+            </a> */}
 
             {/* LinkedIn */}
             <a
