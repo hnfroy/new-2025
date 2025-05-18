@@ -44,7 +44,7 @@ export default function Hero() {
       { y: 0 },
       {
         y: -10,
-        duration: 1.5,
+        duration: 1,
         ease: "sine.inOut",
         repeat: -1,
         yoyo: true,
