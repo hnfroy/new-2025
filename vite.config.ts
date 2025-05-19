@@ -6,9 +6,14 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     tailwindcss(),
+    viteCompression(),
   ],
   build: {
     minify: 'esbuild',
   }
 })
+
+function viteCompression(): import("vite").PluginOption {
+  throw new Error('Function not implemented.')
+}
 
