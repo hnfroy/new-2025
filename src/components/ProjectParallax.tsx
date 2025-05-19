@@ -150,7 +150,7 @@ export default function ProjectParallax() {
           ref={headingRef}
           className="text-4xl text-hero md:text-6xl font-bold text-amber-100"
         >
-          Portofolio.
+          Featured <br />Projects.
         </h2>
 
         {projects.map((project, index) => (
