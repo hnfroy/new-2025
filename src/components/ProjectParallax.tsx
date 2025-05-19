@@ -100,54 +100,45 @@ export default function ProjectParallax() {
       title: "KI Komunal Website",
       description: "Deskripsi project satu yang sangat menarik.",
       image:
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "../../public/assets/img/projects/prj-kikomunal.png",
       alignImage: "md:justify-start",
-      alignText: "md:items-start md:text-left",
+      alignText: "md:items-end md:text-left",
     },
     {
       id: 2,
-      title: "Pengaduan Penyidikan WebApp",
+      title: "Pengaduan WebApp",
       description: "Deskripsi project dua yang tak kalah keren.",
       image:
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "../../public/assets/img/projects/prj-pengaduan.png",
       alignImage: "md:justify-end",
-      alignText: "md:items-end md:text-right",
+      alignText: "md:items-start md:text-right",
     },
     {
       id: 3,
       title: "Hakcipta WebApp",
       description: "Design Website & Dashboard Backoffice.",
       image:
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "../../public/assets/img/projects/prj-hakcipta.png",
       alignImage: "md:justify-start",
-      alignText: "md:items-start md:text-left",
+      alignText: "md:items-end md:text-left",
     },
     {
       id: 4,
       title: "Muda Penuh Kreasi Website",
       description: "Deskripsi project tiga yang luar biasa.",
       image:
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "../../public/assets/img/projects/prj-mpkreasi.png",
       alignImage: "md:justify-end",
-      alignText: "md:items-end md:text-right",
+      alignText: "md:items-start md:text-right",
     },
     {
       id: 5,
       title: "Inti Ragam Perkasa Website",
       description: "Deskripsi project tiga yang luar biasa.",
       image:
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "../../public/assets/img/projects/prj-intrakasa.png",
       alignImage: "md:justify-start",
-      alignText: "md:items-start md:text-left",
-    },
-    {
-      id: 6,
-      title: "Sorot Tajam News Website",
-      description: "Deskripsi project tiga yang luar biasa.",
-      image:
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alignImage: "md:justify-end",
-      alignText: "md:items-end md:text-right",
+      alignText: "md:items-end md:text-left",
     },
   ];
 

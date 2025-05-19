@@ -15,7 +15,7 @@ export default function SmoothScrollWrapper({ children }: { children: React.Reac
     const smoother = ScrollSmoother.create({
       wrapper: wrapper.current!,
       content: content.current!,
-      smooth: 1.8,
+      smooth: 1.2,
       effects: true,
     });
 
