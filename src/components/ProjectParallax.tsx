@@ -43,7 +43,7 @@ export default function ProjectParallax() {
                 trigger: container,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
+                scrub: 0.8,
               },
             }
           );
@@ -100,45 +100,45 @@ export default function ProjectParallax() {
       title: "KI Komunal Website",
       description: "Deskripsi project satu yang sangat menarik.",
       image:
-        "../../public/assets/img/projects/prj-kikomunal.png",
+        "../../public/assets/img/projects/kikomunal.webp",
       alignImage: "md:justify-start",
-      alignText: "md:items-end md:text-left",
+      alignText: "md:items-start md:text-left",
     },
     {
       id: 2,
       title: "Pengaduan WebApp",
       description: "Deskripsi project dua yang tak kalah keren.",
       image:
-        "../../public/assets/img/projects/prj-pengaduan.png",
+        "../../public/assets/img/projects/pengaduan.webp",
       alignImage: "md:justify-end",
-      alignText: "md:items-start md:text-right",
+      alignText: "md:items-end md:text-right",
     },
     {
       id: 3,
       title: "Hakcipta WebApp",
       description: "Design Website & Dashboard Backoffice.",
       image:
-        "../../public/assets/img/projects/prj-hakcipta.png",
+        "../../public/assets/img/projects/ehakcipta.webp",
       alignImage: "md:justify-start",
-      alignText: "md:items-end md:text-left",
+      alignText: "md:items-start md:text-left",
     },
     {
       id: 4,
       title: "Muda Penuh Kreasi Website",
       description: "Deskripsi project tiga yang luar biasa.",
       image:
-        "../../public/assets/img/projects/prj-mpkreasi.png",
+        "../../public/assets/img/projects/mpkreasi.webp",
       alignImage: "md:justify-end",
-      alignText: "md:items-start md:text-right",
+      alignText: "md:items-end md:text-right",
     },
     {
       id: 5,
       title: "Inti Ragam Perkasa Website",
       description: "Deskripsi project tiga yang luar biasa.",
       image:
-        "../../public/assets/img/projects/prj-intrakasa.png",
+        "../../public/assets/img/projects/intrakasa.webp",
       alignImage: "md:justify-start",
-      alignText: "md:items-end md:text-left",
+      alignText: "md:items-start md:text-left",
     },
   ];
 
@@ -170,6 +170,7 @@ export default function ProjectParallax() {
                   src={project.image}
                   alt={project.title}
                   className="w-full rounded-lg shadow-lg object-cover"
+                  loading="lazy"
                 />
                 <div
                   className={`absolute inset-0 flex flex-col items-center text-center ${project.alignText} justify-center px-8 group`}

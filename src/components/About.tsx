@@ -18,7 +18,7 @@ export default function About() {
         trigger: circleRef.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 0.8,
       },
       transformOrigin: "50% 50%",
     });
@@ -30,7 +30,7 @@ export default function About() {
         trigger: circleRef.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 0.8,
       },
       transformOrigin: "50% 50%",
     });
