@@ -8,6 +8,7 @@ export default function ProjectParallax() {
   const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const floatingBtnRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     // Animasi teks heading slide dari kiri
@@ -46,6 +47,24 @@ export default function ProjectParallax() {
               },
             }
           );
+        }
+
+        if (floatingBtnRef.current) {
+          console.log("Floating button found:", floatingBtnRef.current);
+  
+          gsap.fromTo(
+            floatingBtnRef.current,
+            { y: 0 },
+            {
+              y: -20,
+              duration: 1.5,
+              ease: "sine.inOut",
+              repeat: -1,
+              yoyo: true,
+            }
+          );
+        } else {
+          console.warn("Floating button ref is null");
         }
       });
 
@@ -105,7 +124,25 @@ export default function ProjectParallax() {
     },
     {
       id: 4,
+      title: "Muda Penuh Kreasi Website",
+      description: "Deskripsi project tiga yang luar biasa.",
+      image:
+        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alignImage: "md:justify-end",
+      alignText: "md:items-end md:text-right",
+    },
+    {
+      id: 5,
       title: "Inti Ragam Perkasa Website",
+      description: "Deskripsi project tiga yang luar biasa.",
+      image:
+        "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alignImage: "md:justify-start",
+      alignText: "md:items-start md:text-left",
+    },
+    {
+      id: 6,
+      title: "Sorot Tajam News Website",
       description: "Deskripsi project tiga yang luar biasa.",
       image:
         "https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -159,6 +196,17 @@ export default function ProjectParallax() {
             </div>
           </div>
         ))}
+        <div className="relative py-16">
+          <a
+            ref={floatingBtnRef}
+            href="mailto:hnfroy@gmail.com"
+            className="absolute bottom-12 left-1/2 bg-amber-100 text-black px-6 py-4 rounded-full text-lg font-semibold shadow-lg cursor-pointer hover:bg-amber-200 transition z-50 select-none"
+            style={{ transform: "translateX(-50%)" }}
+            aria-label="Contact Me"
+          >
+            See All Projects
+          </a>
+        </div>
       </div>
     </div>
   );
