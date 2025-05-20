@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectParallax() {
@@ -10,7 +13,6 @@ export default function ProjectParallax() {
   const floatingBtnRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    // Animasi teks heading slide dari kiri
     gsap.fromTo(
       headingRef.current,
       { x: -100, opacity: 0 },
@@ -60,8 +62,6 @@ export default function ProjectParallax() {
               yoyo: true,
             }
           );
-        } else {
-          console.warn("Floating button ref is null");
         }
       });
 
@@ -95,7 +95,6 @@ export default function ProjectParallax() {
     {
       id: 1,
       title: "KI Komunal Website",
-      description: "Deskripsi project satu yang sangat menarik.",
       image:
         "../../public/assets/img/projects/kikomunal.webp",
       alignImage: "md:justify-start",
@@ -104,7 +103,6 @@ export default function ProjectParallax() {
     {
       id: 2,
       title: "Pengaduan WebApp",
-      description: "Deskripsi project dua yang tak kalah keren.",
       image:
         "../../public/assets/img/projects/pengaduan.webp",
       alignImage: "md:justify-end",
@@ -113,7 +111,6 @@ export default function ProjectParallax() {
     {
       id: 3,
       title: "Hakcipta WebApp",
-      description: "Design Website & Dashboard Backoffice.",
       image:
         "../../public/assets/img/projects/ehakcipta.webp",
       alignImage: "md:justify-start",
@@ -122,7 +119,6 @@ export default function ProjectParallax() {
     {
       id: 4,
       title: "Muda Penuh Kreasi Website",
-      description: "Deskripsi project tiga yang luar biasa.",
       image:
         "../../public/assets/img/projects/mpkreasi.webp",
       alignImage: "md:justify-end",
@@ -131,7 +127,6 @@ export default function ProjectParallax() {
     {
       id: 5,
       title: "Inti Ragam Perkasa Website",
-      description: "Deskripsi project tiga yang luar biasa.",
       image:
         "../../public/assets/img/projects/intrakasa.webp",
       alignImage: "md:justify-start",
@@ -142,14 +137,12 @@ export default function ProjectParallax() {
   return (
     <div className="w-full bg-zinc-800">
       <div className="container mx-auto bg-zinc-800 py-20 space-y-32">
-        {/* 🔠 Heading Portofolio */}
         <h2
           ref={headingRef}
           className="text-4xl text-hero md:text-6xl font-bold text-amber-100"
         >
           Featured <br />Projects.
         </h2>
-
         {projects.map((project, index) => (
           <div
             key={project.id}
@@ -170,7 +163,7 @@ export default function ProjectParallax() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full rounded-lg shadow-lg object-cover"
+                  className="w-[575px] h-[390px] rounded-lg shadow-lg object-cover"
                   loading="lazy"
                 />
                 <div
@@ -180,9 +173,12 @@ export default function ProjectParallax() {
                     <h2 className="text-2xl md:text-6xl font-bold text-amber-100 drop-shadow-md">
                       {project.title}
                     </h2>
-                    <p className="mt-2 text-amber-100 drop-shadow-md">
-                      {project.description}
-                    </p>
+                    <Link
+                      to={`/project/${project.id}`}
+                      className="inline-block mt-4 bg-amber-100 text-black px-4 py-2 rounded-lg font-semibold hover:bg-amber-200 transition"
+                    >
+                      View Details
+                    </Link>
                   </div>
                 </div>
               </div>
