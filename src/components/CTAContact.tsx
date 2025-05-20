@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function CTAContact() {
@@ -10,8 +9,6 @@ export default function CTAContact() {
   const floatingBtnRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    console.log("CTAContact useEffect running");
-
     const ctx = gsap.context(() => {
       const text = marqueeRef.current?.querySelector(".marquee-text");
       if (text) {
@@ -39,8 +36,6 @@ export default function CTAContact() {
       }
 
       if (floatingBtnRef.current) {
-        console.log("Floating button found:", floatingBtnRef.current);
-
         gsap.fromTo(
           floatingBtnRef.current,
           { y: 0 },

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectParallax() {
@@ -49,9 +48,7 @@ export default function ProjectParallax() {
           );
         }
 
-        if (floatingBtnRef.current) {
-          console.log("Floating button found:", floatingBtnRef.current);
-  
+        if (floatingBtnRef.current) {  
           gsap.fromTo(
             floatingBtnRef.current,
             { y: 0 },
@@ -156,14 +153,18 @@ export default function ProjectParallax() {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            ref={(el) => (projectRefs.current[index] = el)}
+            ref={(el) => {
+              projectRefs.current[index] = el
+            }}
             className="container mx-auto p-6 flex flex-col md:flex-row"
           >
             <div
               className={`flex w-full ${project.alignImage} justify-center relative`}
             >
               <div
-                ref={(el) => (imagesRef.current[index] = el)}
+                ref={(el) => {
+                  imagesRef.current[index] = el
+                }}
                 className="w-full md:w-1/2"
               >
                 <img

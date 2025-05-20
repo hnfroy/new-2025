@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import { gsap } from 'gsap'
 import LogoH from "../../public/assets/img/logo-h.png";
 
 export default function Nav() {
@@ -57,7 +57,7 @@ export default function Nav() {
       }`}
     >
       <div className="mx-2 md:mx-16 px-4 py-4 flex justify-between items-center relative">
-        <img src={LogoH} alt="" className="w-12" loading="lazy" />
+        <img src={LogoH} alt="logo H" className="w-12" loading="lazy" />
 
         <button
           className="space-y-1.5 group relative z-50 bg-transparent border-0"

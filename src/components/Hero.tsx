@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from 'gsap'
 
 export default function Hero() {
   const textRef1 = useRef<HTMLHeadingElement>(null);
   const textRef2 = useRef<HTMLHeadingElement>(null);
   const textRef3 = useRef<HTMLHeadingElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
-  const floatingTxtRef = useRef<HTMLAnchorElement>(null);
+  const floatingTxtRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -16,7 +16,7 @@ export default function Hero() {
     tl.fromTo(
       textRef1.current,
       { opacity: 0, x: -50 },
-      { opacity: 1, x: 0, duration: 1 }
+      { opacity: 1, x: 0, duration: 0.8 }
     )
       .fromTo(
         textRef2.current,
@@ -31,20 +31,18 @@ export default function Hero() {
       .fromTo(
         imgRef.current,
         { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 1 },
+        { opacity: 1, scale: 1, duration: 0.8 },
         "-=0.8"
       );
   }, []);
 
   useEffect(() => {
-    console.log("Floating button found:", floatingTxtRef.current);
-
     gsap.fromTo(
       floatingTxtRef.current,
       { y: 0 },
       {
         y: -10,
-        duration: 1,
+        duration: 0.8,
         ease: "sine.inOut",
         repeat: -1,
         yoyo: true,

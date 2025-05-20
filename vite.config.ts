@@ -1,19 +1,34 @@
+// import react from 'react'
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
+import viteCompression from 'vite-plugin-compression'
+// import react from 'react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    // react(),
+    // compression(),
     tailwindcss(),
-    viteCompression(),
+    viteCompression({
+      algorithm: 'gzip', // juga bisa: 'gzip'
+      ext: '.br',
+      threshold: 1024, // min file size to compress (1kb)
+    }),
   ],
   build: {
-    minify: 'esbuild',
-  }
+    minify: 'esbuild', // defaultnya esbuild, tapi pastikan terset
+    sourcemap: false,
+    // rollupOptions: {
+    //   output: {
+    //     manualChunks: {
+    //       react: ['react', 'react-dom'],
+    //       gsap: ['gsap'],
+    //     },
+    //   },
+    // },
+  },
 })
-
-function viteCompression(): import("vite").PluginOption {
-  throw new Error('Function not implemented.')
-}
+// function compression(): import("vite").PluginOption {
+//   throw new Error('Function not implemented.')
+// }
 
