@@ -20,7 +20,7 @@ export default function Footer() {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/hanifroyyan" // ganti sesuai profil
+              href="https://www.linkedin.com/in/hanif-royyan/" // ganti sesuai profil
               target="_blank"
               rel="noopener noreferrer"
               className="border rounded-full p-2 bg-amber-100 transition"
@@ -32,7 +32,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/hanifroyyan" // ganti sesuai akun
+              href="https://www.instagram.com/hanifroy_" // ganti sesuai akun
               target="_blank"
               rel="noopener noreferrer"
               className="border rounded-full p-2 bg-amber-100 transition"
