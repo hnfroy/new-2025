@@ -101,7 +101,7 @@ export default function Nav() {
           <h1>Me</h1>
         </a>
         <a
-          href="#work"
+          href="/all-projects"
           onClick={() => setIsOpen(false)}
           className="hover:text-amber-100"
         >
