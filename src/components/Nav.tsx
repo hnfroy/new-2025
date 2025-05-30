@@ -57,7 +57,9 @@ export default function Nav() {
       }`}
     >
       <div className="mx-2 md:mx-16 px-4 py-4 flex justify-between items-center relative">
-        <img src={LogoH} alt="logo H" className="w-12" loading="lazy" />
+        <a href="/">
+          <img src={LogoH} alt="logo H" className="w-12" loading="lazy" />
+        </a>
 
         <button
           className="space-y-1.5 group relative z-50 bg-transparent border-0"

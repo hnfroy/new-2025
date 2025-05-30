@@ -187,15 +187,14 @@ export default function ProjectParallax() {
         ))}
         <div className="relative py-16">
         <Link
-  ref={floatingBtnRef}
-  to="/projects"
-  className="absolute bottom-12 left-1/2 bg-amber-100 text-black px-6 py-4 rounded-full text-lg font-semibold shadow-lg cursor-pointer hover:bg-amber-200 transition z-50 select-none"
-  style={{ transform: "translateX(-50%)" }}
-  aria-label="See All Projects"
->
-  See All Projects
-</Link>
-
+            ref={floatingBtnRef}
+            to="/all-projects"
+            className="absolute bottom-12 left-1/2 bg-amber-100 text-black px-6 py-4 rounded-full text-lg font-semibold shadow-lg cursor-pointer hover:bg-amber-200 transition z-10 select-none"
+            style={{ transform: "translateX(-50%)" }}
+            aria-label="See All Projects"
+          >
+            See All Projects
+          </Link>
         </div>
       </div>
     </div>
